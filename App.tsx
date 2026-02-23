@@ -1,25 +1,36 @@
-// import type "@nativescript/macos-node-api";
 import { StatusBar } from 'expo-status-bar';
-import { useEffect } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
-  console.log('Trying NSString...')
-  console.log(NSString);
-
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Text style={styles.lg}>Testing NativeScript in Expo macOS:</Text>
+      <Text style={styles.md}>{chineseToLatin("你好世界")}</Text>
       <StatusBar style="auto" />
     </View>
   );
 }
 
+
+
+
+
+function chineseToLatin(chineseText) {
+  const mutableString = NSMutableString.stringWithString(chineseText);
+
+  CFStringTransform(mutableString, null, kCFStringTransformToLatin, false);
+
+  return mutableString.toString();
+}
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'black',
     alignItems: 'center',
     justifyContent: 'center',
+    gap: 8
   },
+  lg: { fontSize: 36, fontWeight: 'bold', color: 'white' },
+  md: { fontSize: 36, color: 'white' },
 });

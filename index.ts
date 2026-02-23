@@ -5,12 +5,6 @@ import App from './App';
 
 // We gave up `module:react-native-node-api/babel-plugin` as it was
 // complaining about ESM for some reason.
-
-// rpath:
-// -nativescript-macos-node-api—-NativeScript.framework/-nativescript-macos-node-api—-NativeScript
-// True path:
-// macos-node-api--NativeScript.framework/macos-node-api--NativeScript
-// requireNodeAddon("-nativescript-macos-node-api—-NativeScript");
 const { init } = requireNodeAddon("macos-node-api--NativeScript");
 init();
 
