@@ -10,6 +10,7 @@
     "macos": "react-native run-macos"
   },
   "dependencies": {
+    "@nativescript/macos-node-api": "^0.4.0",
     "expo": "~54.0.33",
     "expo-status-bar": "~3.0.9",
     "react": "19.1.4",
@@ -22,6 +23,7 @@
     "@rnx-kit/metro-config": "^2.2.4",
     "@types/react": "~19.1.0",
     "patch-package": "^8.0.1",
+    "react-native-node-api": "^1.0.1",
     "typescript": "~5.9.2"
   },
   "private": true

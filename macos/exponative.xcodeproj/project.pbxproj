@@ -352,10 +352,14 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-exponative-macOS/Pods-exponative-macOS-frameworks.sh",
 				"${PODS_ROOT}/hermes-engine/destroot/Library/Frameworks/macosx/hermes.framework",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/react-native-node-api/macos-node-api--NativeScript.framework/macos-node-api--NativeScript",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/weak-node-api/weak-node-api.framework/weak-node-api",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/hermes.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/macos-node-api--NativeScript.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/weak-node-api.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

@@ -1,0 +1,43 @@
+diff --git a/node_modules/@nativescript/macos-node-api/index.js b/node_modules/@nativescript/macos-node-api/index.js
+index aac54a8..f902ff0 100644
+--- a/node_modules/@nativescript/macos-node-api/index.js
++++ b/node_modules/@nativescript/macos-node-api/index.js
+@@ -8,24 +8,25 @@ if (!isNativeScriptRuntime) {
+     // ===
+     // If we're in a Node-like environment (e.g. Node.js, Deno, or Bun)
+     // ===
++    console.warn("Had to remove Node.js support via patch-package in order to support React Native.");
+ 
+-    const path =
+-      "./build/RelWithDebInfo/NativeScript.apple.node/macos-arm64_x86_64/NativeScript.framework/Versions/A/NativeScript";
++    // const path =
++    //   "./build/RelWithDebInfo/NativeScript.apple.node/macos-arm64_x86_64/NativeScript.framework/Versions/A/NativeScript";
+ 
+-    let metaURL = import.meta.url;
+-    if (!metaURL.includes("://")) {
+-      metaURL = "file://" + metaURL;
+-    }
++    // let metaURL = import.meta.url;
++    // if (!metaURL.includes("://")) {
++    //   metaURL = "file://" + metaURL;
++    // }
+ 
+-    const module = { exports: {} };
++    // const module = { exports: {} };
+ 
+-    // deno-lint-ignore no-process-globals
+-    process.dlopen(module, new URL(path, metaURL).pathname);
++    // // deno-lint-ignore no-process-globals
++    // process.dlopen(module, new URL(path, metaURL).pathname);
+ 
+-    module.exports.init(
+-      // deno-lint-ignore no-process-globals
+-      process.env.METADATA_PATH
+-    );
++    // module.exports.init(
++    //   // deno-lint-ignore no-process-globals
++    //   process.env.METADATA_PATH
++    // );
+   } else if (typeof require !== "undefined") {
+     // ===
+     // If we're in a React Native-like environment

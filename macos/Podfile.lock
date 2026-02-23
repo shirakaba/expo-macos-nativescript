@@ -76,8 +76,16 @@ PODS:
   - fmt (11.0.2)
   - glog (0.3.5)
   - hermes-engine (0.81.5):
-    - hermes-engine/Pre-built (= 0.81.5)
-  - hermes-engine/Pre-built (0.81.5)
+    - hermes-engine/cdp (= 0.81.5)
+    - hermes-engine/Hermes (= 0.81.5)
+    - hermes-engine/inspector (= 0.81.5)
+    - hermes-engine/inspector_chrome (= 0.81.5)
+    - hermes-engine/Public (= 0.81.5)
+  - hermes-engine/cdp (0.81.5)
+  - hermes-engine/Hermes (0.81.5)
+  - hermes-engine/inspector (0.81.5)
+  - hermes-engine/inspector_chrome (0.81.5)
+  - hermes-engine/Public (0.81.5)
   - RCT-Folly (2024.11.18.00):
     - boost
     - DoubleConversion
@@ -1819,6 +1827,35 @@ PODS:
     - React-RCTFBReactNativeSpec
     - ReactCommon/turbomodule/core
     - SocketRocket
+  - react-native-node-api (1.0.1):
+    - boost
+    - DoubleConversion
+    - fast_float
+    - fmt
+    - glog
+    - hermes-engine
+    - RCT-Folly
+    - RCT-Folly/Fabric
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Core
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-ImageManager
+    - React-jsi
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-renderercss
+    - React-rendererdebug
+    - React-utils
+    - ReactCodegen
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - SocketRocket
+    - weak-node-api
+    - Yoga
   - React-NativeModulesApple (0.81.2):
     - boost
     - DoubleConversion
@@ -2325,6 +2362,7 @@ PODS:
     - React-utils (= 0.81.2)
     - SocketRocket
   - SocketRocket (0.7.1)
+  - weak-node-api (0.1.1)
   - Yoga (0.0.0)
 
 DEPENDENCIES:
@@ -2376,6 +2414,7 @@ DEPENDENCIES:
   - React-logger (from `../node_modules/react-native-macos/ReactCommon/logger`)
   - React-Mapbuffer (from `../node_modules/react-native-macos/ReactCommon`)
   - React-microtasksnativemodule (from `../node_modules/react-native-macos/ReactCommon/react/nativemodule/microtasks`)
+  - react-native-node-api (from `../node_modules/react-native-node-api`)
   - React-NativeModulesApple (from `../node_modules/react-native-macos/ReactCommon/react/nativemodule/core/platform/ios`)
   - React-oscompat (from `../node_modules/react-native-macos/ReactCommon/oscompat`)
   - React-perflogger (from `../node_modules/react-native-macos/ReactCommon/reactperflogger`)
@@ -2407,6 +2446,7 @@ DEPENDENCIES:
   - ReactCodegen (from `build/generated/ios`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native-macos/ReactCommon`)
   - SocketRocket (~> 0.7.1)
+  - weak-node-api (from `../node_modules/weak-node-api`)
   - Yoga (from `../node_modules/react-native-macos/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -2509,6 +2549,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-macos/ReactCommon"
   React-microtasksnativemodule:
     :path: "../node_modules/react-native-macos/ReactCommon/react/nativemodule/microtasks"
+  react-native-node-api:
+    :path: "../node_modules/react-native-node-api"
   React-NativeModulesApple:
     :path: "../node_modules/react-native-macos/ReactCommon/react/nativemodule/core/platform/ios"
   React-oscompat:
@@ -2569,6 +2611,8 @@ EXTERNAL SOURCES:
     :path: build/generated/ios
   ReactCommon:
     :path: "../node_modules/react-native-macos/ReactCommon"
+  weak-node-api:
+    :path: "../node_modules/weak-node-api"
   Yoga:
     :path: "../node_modules/react-native-macos/ReactCommon/yoga"
 
@@ -2586,7 +2630,7 @@ SPEC CHECKSUMS:
   FBLazyVector: 0e3076dbb16169b0afc2d701a24a526423b5e76b
   fmt: 24e7591456deb60b4a77518f83d9a916ac84223f
   glog: 0b31c25149b9d350b2666c7d459229861a00ec07
-  hermes-engine: 9f4dfe93326146a1c99eb535b1cb0b857a3cd172
+  hermes-engine: 09670744006630a770eed5745a00ebad9f1d465b
   RCT-Folly: 0a7558aedae101878b4a1273756c05613dbdfb61
   RCTDeprecation: b60b889eafa75f46c3d6be5332681efbb16ad0c7
   RCTRequired: 070d7f0ef937e7a93aab20761cef55419f16b5de
@@ -2620,6 +2664,7 @@ SPEC CHECKSUMS:
   React-logger: 2780b54a2c98e337ed27b0e1b79994238311f9c8
   React-Mapbuffer: d627f2c7f03481955636df249ce6b2243fac892d
   React-microtasksnativemodule: b3cc05628c044f29166529be7d8ee0a09c6976e5
+  react-native-node-api: 5e43dee7621daa67b47b51c3c41a21d75f386b88
   React-NativeModulesApple: dffee7d2911aaffb10219b5e39b2fd8273d350ef
   React-oscompat: 575d3dbc887477c0f3d42ecf1b9a48863b50be87
   React-perflogger: e5fc00a75f1551b524dc815058129fdf6ccf2428
@@ -2651,8 +2696,9 @@ SPEC CHECKSUMS:
   ReactCodegen: 66787d3046eb9ff4f8b268bd0c881cb38b70e996
   ReactCommon: 6969ca55876bec4d9e8a905371c046fe1da03a1d
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
+  weak-node-api: 5eec2748a98e881732c9251cb34894a5295e6867
   Yoga: 927965149d92a77941dba4f446f50786a95f8ecc
 
-PODFILE CHECKSUM: 0ffee8c203aaabe3ebff0099699813f26f539ffb
+PODFILE CHECKSUM: 5e91b1b51c80a0236af05e34f42fffe5845a84f5
 
 COCOAPODS: 1.16.2
