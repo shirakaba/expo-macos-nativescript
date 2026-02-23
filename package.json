@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "main": "index.ts",
   "scripts": {
+    "postinstall": "patch-package",
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "macos": "react-native run-macos"
   },
   "dependencies": {
     "expo": "~54.0.33",
@@ -16,7 +17,11 @@
     "react-native-macos": "0.81.2"
   },
   "devDependencies": {
+    "@react-native-community/cli": "^20.1.1",
+    "@react-native/metro-config": "~0.81.0",
+    "@rnx-kit/metro-config": "^2.2.4",
     "@types/react": "~19.1.0",
+    "patch-package": "^8.0.1",
     "typescript": "~5.9.2"
   },
   "private": true
