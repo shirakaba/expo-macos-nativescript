@@ -4,7 +4,7 @@
     "": {
       "name": "exponative",
       "dependencies": {
-        "@nativescript/macos-node-api": "^0.4.2-next.2026-03-01-22543545974",
+        "@nativescript/macos-node-api": "^0.4.3-next.2026-03-01-22544187868",
         "expo": "~54.0.33",
         "expo-status-bar": "~3.0.9",
         "react": "19.1.4",
@@ -297,7 +297,7 @@
 
     "@jridgewell/trace-mapping": ["@jridgewell/trace-mapping@0.3.31", "", { "dependencies": { "@jridgewell/resolve-uri": "^3.1.0", "@jridgewell/sourcemap-codec": "^1.4.14" } }, "sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw=="],
 
-    "@nativescript/macos-node-api": ["@nativescript/macos-node-api@0.4.2-next.2026-03-01-22543545974", "", { "dependencies": { "@nativescript/objc-node-api": "^1.0.0-alpha.7" } }, "sha512-pPxrv7a8P1JydQfjTkfYQ+qSzF2oRfwhYhB1cI0Kpth9iydeMq+zQNgvqPESpqaj4qFcPCsGegpxjTux++uhrg=="],
+    "@nativescript/macos-node-api": ["@nativescript/macos-node-api@0.4.3-next.2026-03-01-22544187868", "", { "dependencies": { "@nativescript/objc-node-api": "^1.0.0-alpha.7" } }, "sha512-qD8IGQ/i5Vhn3UiNDYGMBM9qwOdsYsoWKWVnFmamjcaElH5cL8ao9U/cSXRWESJkM7WamHNlE0SYwB4/+qLfDg=="],
 
     "@nativescript/objc-node-api": ["@nativescript/objc-node-api@1.0.0-alpha.7", "", {}, "sha512-HCkKX46wmc/Oe+Td958HeRmlqKCKmzeeIm0Kofb8aU+6WqjslLK8xGj6HLQT1SyzLWNQdr3dYp7PLFixMjBymw=="],
 

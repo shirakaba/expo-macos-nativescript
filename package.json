@@ -10,7 +10,7 @@
     "macos": "react-native run-macos"
   },
   "dependencies": {
-    "@nativescript/macos-node-api": "^0.4.2-next.2026-03-01-22543545974",
+    "@nativescript/macos-node-api": "^0.4.3-next.2026-03-01-22544187868",
     "expo": "~54.0.33",
     "expo-status-bar": "~3.0.9",
     "react": "19.1.4",
