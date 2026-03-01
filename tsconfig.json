@@ -3,5 +3,5 @@
   "compilerOptions": {
     "strict": true
   },
-  "include": ["index.ts", "App.tsx", "src"]
+  "include": ["index.ts", "src"]
 }

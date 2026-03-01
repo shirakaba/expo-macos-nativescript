@@ -4,7 +4,7 @@
 import { registerRootComponent } from "expo";
 import { requireNodeAddon } from "react-native-node-api";
 
-import App from "./App";
+import App from "./src/App";
 
 // We gave up `module:react-native-node-api/babel-plugin` as it was
 // complaining about ESM for some reason.
