@@ -1,5 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Button } from "react-native";
+import { runOnUISync } from "react-native-worklets";
 import { ViewController } from "./spritekit";
 
 export default function App() {
@@ -10,15 +11,18 @@ export default function App() {
       <Button
         title="Start SpriteKit game"
         onPress={() => {
-          const {
-            mainWindow: { contentViewController },
-          } = NSApplication.sharedApplication;
+          runOnUISync(() => {
+            "worklet";
+            const {
+              mainWindow: { contentViewController },
+            } = NSApplication.sharedApplication;
 
-          // Problem: we can't do any UI work until the thread-safety PR is
-          // implemented. Well, unless we use React Native Worklets.
-          contentViewController.presentViewControllerAsModalWindow(
-            ViewController.new(),
-          );
+            console.log(`contentViewController`, contentViewController);
+
+            contentViewController.presentViewControllerAsModalWindow(
+              ViewController.new(),
+            );
+          });
         }}
       />
       <StatusBar style="auto" />
