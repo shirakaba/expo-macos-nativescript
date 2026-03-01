@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Button } from "react-native";
-import type { ViewController as ViewControllerType } from "./spritekit";
+import { ViewController } from "./spritekit";
 
 export default function App() {
   return (
@@ -10,11 +10,6 @@ export default function App() {
       <Button
         title="Start SpriteKit game"
         onPress={() => {
-          // Lazy-load this, because otherwise the objc.import commands happen
-          // too early.
-          const { ViewController } = require("./spritekit") as {
-            ViewController: typeof ViewControllerType;
-          };
           const {
             mainWindow: { contentViewController },
           } = NSApplication.sharedApplication;

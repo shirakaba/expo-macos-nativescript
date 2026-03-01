@@ -3,6 +3,8 @@
 /// <reference types="@nativescript/macos-node-api/CoreFoundation.d.ts" />
 /// <reference types="@nativescript/macos-node-api/CoreGraphics.d.ts" />
 
+import "./initNativeScript";
+
 objc.import("SpriteKit");
 objc.import("GameController");
 
