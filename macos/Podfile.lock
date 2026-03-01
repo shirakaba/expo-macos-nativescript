@@ -2664,7 +2664,7 @@ SPEC CHECKSUMS:
   React-logger: 2780b54a2c98e337ed27b0e1b79994238311f9c8
   React-Mapbuffer: d627f2c7f03481955636df249ce6b2243fac892d
   React-microtasksnativemodule: b3cc05628c044f29166529be7d8ee0a09c6976e5
-  react-native-node-api: 5e43dee7621daa67b47b51c3c41a21d75f386b88
+  react-native-node-api: 64ebcbf129f4ee735aaf85985a2317f9c3e54adb
   React-NativeModulesApple: dffee7d2911aaffb10219b5e39b2fd8273d350ef
   React-oscompat: 575d3dbc887477c0f3d42ecf1b9a48863b50be87
   React-perflogger: e5fc00a75f1551b524dc815058129fdf6ccf2428

@@ -1,5 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function App() {
   return (
@@ -11,14 +11,10 @@ export default function App() {
   );
 }
 
-
-
-
-
-function chineseToLatin(chineseText) {
+function chineseToLatin(chineseText: string) {
   const mutableString = NSMutableString.stringWithString(chineseText);
 
-  CFStringTransform(mutableString, null, kCFStringTransformToLatin, false);
+  CFStringTransform(mutableString, null, kCFStringTransformToLatin, 0);
 
   return mutableString.toString();
 }
@@ -26,11 +22,11 @@ function chineseToLatin(chineseText) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'black',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 8
+    backgroundColor: "black",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 8,
   },
-  lg: { fontSize: 36, fontWeight: 'bold', color: 'white' },
-  md: { fontSize: 36, color: 'white' },
+  lg: { fontSize: 36, fontWeight: "bold", color: "white" },
+  md: { fontSize: 36, color: "white" },
 });

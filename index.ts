@@ -1,11 +1,16 @@
-import { registerRootComponent } from 'expo';
+/// <reference types="@nativescript/macos-node-api" />
+/// <reference types="@nativescript/macos-node-api/types/CoreFoundation.d.ts" />
+
+import { registerRootComponent } from "expo";
 import { requireNodeAddon } from "react-native-node-api";
 
-import App from './App';
+import App from "./App";
 
 // We gave up `module:react-native-node-api/babel-plugin` as it was
 // complaining about ESM for some reason.
-const { init } = requireNodeAddon("macos-node-api--NativeScript");
+const { init } = requireNodeAddon("macos-node-api--NativeScript") as {
+  init(): void;
+};
 init();
 
 // registerRootComponent calls AppRegistry.registerComponent('main', () => App);
