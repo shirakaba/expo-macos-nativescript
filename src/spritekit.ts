@@ -1,58 +1,10 @@
-import "@nativescript/macos-node-api";
-import "@nativescript/macos-node-api/SpriteKit.d.ts";
-import "@nativescript/macos-node-api/GameController.d.ts";
-import "@nativescript/macos-node-api/CoreFoundation.d.ts";
-import "@nativescript/macos-node-api/CoreGraphics.d.ts";
+/// <reference types="@nativescript/macos-node-api/SpriteKit.d.ts" />
+/// <reference types="@nativescript/macos-node-api/GameController.d.ts" />
+/// <reference types="@nativescript/macos-node-api/CoreFoundation.d.ts" />
+/// <reference types="@nativescript/macos-node-api/CoreGraphics.d.ts" />
 
 objc.import("SpriteKit");
 objc.import("GameController");
-
-export class ApplicationDelegate
-  extends NSObject
-  implements NSApplicationDelegate, NSWindowDelegate
-{
-  static ObjCProtocols = [NSApplicationDelegate, NSWindowDelegate];
-
-  static {
-    NativeClass(this);
-  }
-
-  applicationDidFinishLaunching(_notification: NSNotification) {
-    const menu = NSMenu.new();
-    NSApp.mainMenu = menu;
-
-    const appMenuItem = NSMenuItem.new();
-    menu.addItem(appMenuItem);
-
-    const appMenu = NSMenu.new();
-    appMenuItem.submenu = appMenu;
-
-    appMenu.addItemWithTitleActionKeyEquivalent("Quit", "terminate:", "q");
-
-    const controller = ViewController.new();
-    const window = NSWindow.windowWithContentViewController(controller);
-
-    window.title = "SpriteKit";
-    window.delegate = this;
-
-    window.backgroundColor = NSColor.colorWithSRGBRedGreenBlueAlpha(
-      118 / 255,
-      171 / 255,
-      235 / 255,
-      1,
-    );
-
-    window.acceptsMouseMovedEvents = true;
-
-    window.makeKeyAndOrderFront(this);
-
-    NSApp.activateIgnoringOtherApps(false);
-  }
-
-  windowWillClose(_notification: NSNotification) {
-    NSApp.terminate(this);
-  }
-}
 
 export class BattlefieldScene
   extends SKScene
@@ -317,9 +269,6 @@ export class ViewController extends NSViewController {
 
     scene.scaleMode = SKSceneScaleMode.AspectFill;
 
-    /**
-     * @type {SKView}
-     */
     // @ts-ignore
     const skView: SKView = this.view;
 
@@ -331,10 +280,3 @@ export class ViewController extends NSViewController {
     skView.ignoresSiblingOrder = true;
   }
 }
-
-const NSApp = NSApplication.sharedApplication;
-NSApp.setActivationPolicy(NSApplicationActivationPolicy.Regular);
-
-NSApp.delegate = ApplicationDelegate.new();
-
-NSApplicationMain(0, null);
