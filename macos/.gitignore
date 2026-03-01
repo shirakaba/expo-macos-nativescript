@@ -1,3 +1,6 @@
 # CocoaPods
 Pods/
+
+# Xcode
 .xcode.env.local
+xcuserdata
